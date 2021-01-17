@@ -1,5 +1,11 @@
 const express = require('express')
 const cors = require('cors')
+const monk = require('monk')
+
+// mongo will automatically create db or collection if not exist 
+const db = monk('localhost/mini_twitter') // initialising our local mongo db named 'mini_twitter'
+const tweets = db.get('tweets') // collection inside of our local mongo db
+
 const app = express()
 const PORT = 5000
 
@@ -17,14 +23,30 @@ app.get('/', (req, res) => {
     })
 })
 
-app.post('/tweet', (req, res) => {
+app.get('/tweets', (req, res) => {
+
+    tweets
+        .find()
+        .then(_tweets => {
+            res.json(_tweets)
+        })
+
+})
+
+app.post('/tweets', (req, res) => {
     if (validated(req.body)) {
         // insert to mongo-db
         let tweet = {
             name: req.body.name.toString(),
             message: req.body.message.toString(),
+            created_at: new Date()
         }
-        console.log(tweet);
+
+        tweets
+            .insert(tweet)
+            .then(createdTweet => {
+                res.json(createdTweet)
+            })
     } else {
         res.status(422)
         res.json({

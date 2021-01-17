@@ -13,9 +13,14 @@ body {
 
 .container,
 header,
-.loading {
+.loading,
+.tweets-list {
     width: 50%;
     margin: 0 auto;
+}
+
+.tweets-list {
+    padding: 20px;
 }
 
 header {
