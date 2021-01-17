@@ -1,9 +1,18 @@
+let form = document.querySelector('form')
+let loading = document.querySelector('.loading')
 
-let form = document.querySelector('form');
-// let post_button = document.querySelector('#post');
+loading.style.display = 'none'
 
-form.addEventListener('submit',(event)=>{
-event.preventDefault();
-let formdata = new FormData(form);
-    console.log(formdata);
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let formdata = new FormData(form)
+    let name = formdata.get('name')
+    let message = formdata.get('message')
+
+    let tweet = {
+        name,
+        message
+    }
+    form.style.display = 'none'
+    loading.style.display = ''
 });
