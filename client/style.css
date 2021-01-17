@@ -8,7 +8,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
-    background-color: #FCFCFC;
+    background-color: #2A4365;
 }
 
 .container,
@@ -19,16 +19,12 @@ header,
     margin: 0 auto;
 }
 
-.tweets-list {
-    padding: 20px;
-}
-
 header {
     font-size: 2.3rem;
     text-align: center;
     padding: 1.3em;
     font-family: 'Sacramento', sans-serif;
-    color: #59a9ff;
+    color: white;
 }
 
 .name,
@@ -37,26 +33,31 @@ header {
     margin: 1.2rem;
     padding: 1rem;
     border: none;
-    background-color: white;
-    box-shadow: 0px 2px 7px 1px #59a9ff65;
+    background-color: transparent;
+    border: 2px solid #718096;
+    border-radius: 10px;
 }
 
+.name::placeholder,
+.message::placeholder {
+    color: #718096;
+    font-size: 20px;
+    font-weight: bold;
+}
 
 .button {
     padding: 10px 40px;
-    font-weight: bold;
     font-size: 1rem;
     color: white;
-    background-color: #ff4c34e1;
+    background-color: #63B3ED;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     text-transform: uppercase;
     cursor: pointer;
 }
 
 .button:hover {
-    background-color: #FF3A1E;
-    border-radius: 10px;
+    background-color: #3182CE;
     letter-spacing: 1.8px;
     transition: .3s all ease;
 }
@@ -70,6 +71,37 @@ header {
     background-size: cover;
 }
 
+.tweets-list {
+    padding: 20px;
+}
+
+.tweet {
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+    border-top: 2px solid #718096;
+    border-right: 2px solid #718096;
+    border-left: 2px solid #718096;
+
+}
+
+.tweet>div {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #718096;
+    margin-bottom: 10px;
+}
+
+.tweet>div>h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.tweet>div>small {
+    color: #718096;
+}
 
 @media screen and (max-width:800px) {
 

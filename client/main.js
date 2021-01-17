@@ -44,16 +44,20 @@ function getTweets() {
             console.log(tweets);
             tweets.forEach((tweet) => {
                 const div = document.createElement('div')
+                div.classList.add(['tweet'])
                 const header = document.createElement('h3')
                 header.textContent = tweet.name
                 const message = document.createElement('p')
                 message.textContent = tweet.message
                 const date = document.createElement('small')
+                const head = document.createElement('div')
                 let created_at = moment(tweet.created_at.toString(), "YYYY-MM-DD");
                 date.textContent = created_at.fromNow()
-                div.appendChild(header)
+                head.appendChild(header)
+                head.appendChild(date)
+
+                div.appendChild(head)
                 div.appendChild(message)
-                div.appendChild(date)
                 tweet_list.appendChild(div)
             })
         }).finally(() => {
