@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Neo - Tweeter</title>
 </head>
 
@@ -24,7 +25,8 @@
                 <textarea name="message" id="message" class="message" cols="30" rows="10"
                     placeholder="What's on your mind?"></textarea>
             </div>
-            <button id="post" type="submit" class="button">post</button>
+            <button id="post" type="submit"
+                class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">Tweet</button>
         </form>
     </main>
     <div class="tweets-list">

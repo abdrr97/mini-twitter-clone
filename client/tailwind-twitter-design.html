@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@1.4.6/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex items-center justify-center bg-blue-900">
+    <div class="mt-10 flex">
+
+        <div class="w-2/5 text-white h-12 pl-32 py-4 h-auto"></div>
+
+        <div class="w-3/5 border border-gray-600">
+            <!--middle wall-->
+
+            <div class="flex">
+                <div class="flex-1 m-2">
+                    <h2 class="px-4 py-2 text-xl font-semibold text-white">Mini Twitter</h2>
+                </div>
+            </div>
+
+            <hr class="border-gray-600">
+
+            <div class="">
+                <input type="text" class="m-10 bg-transparent text-gray-400 font-medium text-lg w-11/12"
+                    placeholder="Enter Your Name">
+            </div>
+            <hr class="border-gray-600">
+            <div class="m-10">
+                <textarea class=" bg-transparent text-gray-400 font-medium text-lg w-full" rows="2" cols="50"
+                    placeholder="What's happening?"></textarea>
+            </div>
+            <!--middle creat tweet below icons-->
+            <div class="flex">
+                <div class="flex-1 my-5">
+                    <button
+                        class="bg-blue-400 mt-5 hover:bg-blue-600 text-white font-bold py-2 px-8 rounded-full mr-8 float-right">
+                        Tweet
+                    </button>
+                </div>
+            </div>
+
+            <hr class="border-blue-800 border-4">
+
+            <!--first tweet start-->
+            <div class="tweets">
+                <div class="tweet">
+                    <p class="p-10 pb-0 text-base leading-6 font-medium text-white">
+                        Sonali Hirave
+                        <span
+                            class="text-sm leading-5 font-medium text-gray-400 group-hover:text-gray-300 transition ease-in-out duration-150">
+                            @ShonaDesign . 16 April
+                        </span>
+                    </p>
+                    <p class="p-10 text-base width-auto font-medium text-white flex-shrink">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis consectetur tempore
+                        accusamus, minus ullam ut harum sint fugiat? Ipsa voluptas odio laudantium doloremque ipsam
+                        soluta dolorem at blanditiis minima.
+                    </p>
+                </div>
+            </div>
+            <hr class="border-gray-600">
+
+        </div>
+        <div class="w-2/5 h-12"></div>
+    </div>
+</body>
+
+</html>
